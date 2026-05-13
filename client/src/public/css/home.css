@@ -1,0 +1,129 @@
+body{
+    margin:0;
+    padding:0;
+    background-color:#FFFFFF;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#contenedor{
+    width:90%;
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:30px;
+}
+
+#logo{
+    width:70px;
+}
+
+h1{
+    font-size:45px;
+    margin-bottom:30px;
+}
+
+form{
+    width:100%;
+}
+
+.datospersonales{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:25px;
+}
+
+label{
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+input{
+    height:35px;
+    border:1px solid gray;
+    border-radius:5px;
+    padding-left:10px;
+}
+
+h2{
+    text-align:center;
+    margin:40px 0 30px;
+}
+
+#dias{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:40px;
+}
+
+#contenedorDias{
+    display:flex;
+    gap:8px;
+    align-items:center;
+}
+
+#contenedorDias button{
+    width:65px;
+    height:55px;
+    border-radius:6px;
+    border:1px solid gray;
+    background:white;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:14px;
+    transition:0.2s;
+}
+
+#contenedorDias button:hover{
+    background-color:black;
+    color:white;
+    transform:scale(1.05);
+}
+
+#contenedorDias button.activo{
+    background-color:black;
+    color:white;
+    border:1px solid black;
+}
+
+#anterior,
+#siguiente{
+    width:35px;
+    height:35px;
+    border:1px solid gray;
+    background:white;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+.horarios{
+    margin-bottom:25px;
+}
+
+.bloques{
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+
+.bloques button{
+    padding:10px 15px;
+    border:1px solid gray;
+    border-radius:5px;
+    background-color:white;
+    cursor:pointer;
+}
+
+#reservar{
+    width:100%;
+    padding:15px;
+    background-color:black;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:20px;
+    cursor:pointer;
+}
