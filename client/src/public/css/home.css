@@ -12,16 +12,18 @@ body{
     display:flex;
     flex-direction:column;
     align-items:center;
-    padding-top:30px;
+    padding:20px 0;
 }
 
 #logo{
     width:70px;
+    margin-bottom:20px;
 }
 
 h1{
     font-size:45px;
     margin-bottom:30px;
+    text-align:center;
 }
 
 form{
@@ -37,45 +39,57 @@ form{
 label{
     font-weight:bold;
     margin-bottom:5px;
+    font-size:15px;
 }
 
 input{
-    height:35px;
+    height:40px;
     border:1px solid gray;
     border-radius:5px;
-    padding-left:10px;
+    padding:0 10px;
+    font-size:16px;
+    box-sizing:border-box;
 }
 
 h2{
     text-align:center;
     margin:40px 0 30px;
+    font-size:28px;
 }
 
 #dias{
     display:flex;
     align-items:center;
-    justify-content:center;
-    gap:10px;
-    margin-bottom:40px;
-}
-
-#contenedorDias{
-    display:flex;
     gap:8px;
-    align-items:center;
+    margin-bottom:40px;
+    width:100%;
 }
 
-#contenedorDias button{
-    width:65px;
-    height:55px;
-    border-radius:6px;
-    border:1px solid gray;
-    background:white;
-    cursor:pointer;
-    font-weight:bold;
-    font-size:14px;
-    transition:0.2s;
+#contenedorDias {
+    display: flex;
+    justify-content: space-between; /* reparte los botones */
+    width: 100%;
+    gap: 4px; /* espacio entre botones */
 }
+
+#contenedorDias button {
+    flex: 1;              /* cada botón ocupa el mismo espacio */
+    min-width: 0;         /* permite que se achiquen */
+    height: 55px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
 
 #contenedorDias button:hover{
     background-color:black;
@@ -91,30 +105,38 @@ h2{
 
 #anterior,
 #siguiente{
-    width:35px;
-    height:35px;
+    width:34px;
+    height:34px;
     border:1px solid gray;
     background:white;
     cursor:pointer;
     border-radius:5px;
+    flex-shrink:0;
 }
 
 .horarios{
     margin-bottom:25px;
+    width:100%;
+}
+
+.horarios h3{
+    margin-bottom:10px;
 }
 
 .bloques{
     display:flex;
     gap:10px;
     margin-top:10px;
+    flex-wrap:wrap;
 }
 
 .bloques button{
-    padding:10px 15px;
+    padding:12px 16px;
     border:1px solid gray;
     border-radius:5px;
     background-color:white;
     cursor:pointer;
+    font-size:15px;
 }
 
 #reservar{
@@ -126,4 +148,91 @@ h2{
     border-radius:10px;
     font-size:20px;
     cursor:pointer;
+    margin-top:20px;
 }
+
+/*tablets */
+@media (max-width:768px){
+
+    #contenedor{
+        width:92%;
+    }
+
+    h1{
+        font-size:38px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    #contenedorDias button{
+        height:50px;
+        font-size:11px;
+    }
+
+    .bloques button{
+        flex:1 1 calc(50% - 10px);
+    }
+}
+
+/*celulares */
+
+@media (max-width:480px){
+
+    #contenedor{
+        width:94%;
+        padding-top:15px;
+    }
+
+    #logo{
+        width:60px;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    h2{
+        font-size:22px;
+        margin:30px 0 20px;
+    }
+
+    input{
+        height:42px;
+        font-size:15px;
+    }
+
+    #dias{
+        gap:5px;
+    }
+
+    #anterior,
+    #siguiente{
+        width:34px;
+        height:34px;
+    }
+
+    #contenedorDias{
+        gap:6px;
+    }
+
+    #contenedorDias button{
+        height:45px;
+        font-size:10px;
+    }
+
+    .bloques{
+        flex-direction:column;
+    }
+
+    .bloques button{
+        width:100%;
+    }
+
+    #reservar{
+        font-size:18px;
+        padding:14px;
+    }
+}
+
